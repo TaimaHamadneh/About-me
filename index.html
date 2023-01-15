@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin :0;
+            padding: 0;
+            box-sizing :border-box;
+
+        }
+        body{
+            width: 100%;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #2b2a2f;
+
+        }
+        .about-container{
+            width: 100%;
+            padding: 50px 8%;
+            background-color: #2b2a2f;
+    color: #fff;
+        }
+        .imageSection{
+            grid-area: imageSect;
+        }
+        .infoSection{
+            grid-area: infoSect;
+
+        }
+
+        .about-container .about_contents {
+            display: grid;
+            grid-template-columns: 2fr 5fr;
+            grid-gap: 50px;
+            grid-template-areas: 'imageSect infoSect';
+        }
+        .about_contents .imageSection {
+            position: relative;
+            min-width: 300px;
+            height: 380px;
+        }
+        .imageSection img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+        }
+        .about_contents .imageSection::after{
+            position:absolute;
+    content:'';
+    width: 100%;
+    height: 100%;
+    outline: 3px solid #FA8072;
+    top: 15px;
+    left:15px;
+    z-index: 1;
+        }
+        .infoSection h2{
+            color: #FA8072;
+    font-size: 30px;
+    font-family: 'DynaPuff', cursive;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 5px;
+    position: relative;
+        }
+        .infoSection h2::before{
+            content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 110%;
+    left:0px;
+    background-color: #FA8072;
+        }
+        .infoSection h2::after{
+            content: '';
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    top: calc(110% - 1px);
+    left:0px;
+    background-color: #FA8072;
+        }
+
+        .infoSection h3{
+            font-family: 'DynaPuff', cursive;
+    font-size: 20px;
+    font-weight: 600;
+    color:#ffff;
+    padding: 14px 0px 15px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+        }
+        .infoSection p{
+            color:#fff;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: justify;
+    padding-bottom: 8px;
+        }
+        @media(max-width: 690px){
+            .about-container .about_contents {
+            grid-template-areas: 'imageSect '
+                                  'infoSect';
+        }
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <section class="about-container" id="About">
+        <div class="about_contents">
+            <section class="imageSection">
+                <img src="img/Taima.PNG" style="width: 100%; height: 100%;">
+            </section>
+            <section class="infoSection">
+                <h2>About me</h2>
+                <h3> 
+                    Full Stack developer 
+                </h3>
+                <p>  I'm Taima Hamadneh , Fourth year computer engineering student and there are 39 hours remaining to graduate.<br>
+                    During my undergraduate studies, I worked on a variety of projects, including:<br></p>
+                <span style="font-size: 1.4rem; color: #777cf5;">A medical laboratory:</span>  <br>
+Designed and developed frontend web pages using NetBeans.<br> 
+Develop the backend for our web pages using Java .<br><br>
+
+<span style="font-size: 1.4rem; color: #777cf5;">Greece's Travel: </span><br>
+Designed and developed frontend web pages using HTML5 , CSS3 , and JavaScript .<br>
+Develop the backend for our web pages using PHP.<br><br>
+
+
+Also I worked on develop part of the backend for a wep page using Django (Frameworks).<br>
+I also have some projects in my portfolio, which you can view here : <a href="https://taimahamadneh.github.io/Portfolio/" style="color:#777cf5;">Portfolio</a>
+
+
+<br> <br>I've taken some programming courses, include Backend Bootcamp (Django), Python Bootcamp, Version Control with Git, and a PCB Design course on the hardware side.
+<p><span style=" color: #777cf5;">I aspire to be successful and build too many projects.</span></p>
+Finally I am really interested in technology and innovation, as well as keeping up with what is going on in the world.
+I am also really interested in robotics and artificial intelligence, and I hope to expand my knowledge and talents in this area.
+
+            </section>
+
+
+</body>
+</html>
